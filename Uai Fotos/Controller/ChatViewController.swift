@@ -21,8 +21,8 @@ class ChatViewController: JSQMessagesViewController {
 extension ChatViewController {
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
-        let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
         
+        let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
         messages.append(message!)
         
         finishSendingMessage()
@@ -68,6 +68,8 @@ extension ChatViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.inputToolbar.contentView.leftBarButtonItem = nil
+        
         // tell JSQMessagesViewController
         // who is the current user
         self.senderId = currentUser?.name
@@ -81,8 +83,8 @@ extension ChatViewController {
     func getMessages() -> [JSQMessage] {
         var messages = [JSQMessage]()
         
-        let message1 = JSQMessage(senderId: currentUser?.name, displayName: currentUser?.name, text: "Hey Tim how are you?")
-        let message2 = JSQMessage(senderId: friend?.name, displayName: friend?.name, text: "Fine thanks, and you?")
+        let message1 = JSQMessage(senderId: currentUser?.name, displayName: currentUser?.name, text: "Cumé que ocê tá \(friend?.name ?? "")?")
+        let message2 = JSQMessage(senderId: friend?.name, displayName: friend?.name, text: "Uai sô tô bem e ocê?")
         
         messages.append(message1!)
         messages.append(message2!)
