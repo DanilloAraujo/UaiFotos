@@ -16,6 +16,7 @@ class MessageTableViewCell: UITableViewCell {
     @IBOutlet weak var friendAvatar: SwiftyAvatar!
     @IBOutlet weak var friendName: UILabel!
     @IBOutlet weak var friendStatus: UILabel!
+    @IBOutlet weak var btnCamera: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

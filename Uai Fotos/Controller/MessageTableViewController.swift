@@ -42,10 +42,16 @@ class MessageTableViewController: UITableViewController {
         if let feedItem = self.feedData?[indexPath.row] {
             cell.friendAvatar.kf.setImage(with: feedItem.avatarUrl)
             cell.friendName.text = feedItem.name
-            cell.friendStatus.text = "Online há 28 minutos"
+            cell.friendStatus.text = randomSatatus()
+            cell.btnCamera.isHidden = true
         }
         
         return cell
+    }
+    
+    func randomSatatus() -> String {
+        let status = ["Online há 28 minutos . 1 sem",    "❤️ 9 sem", "? . 17 sem", "Online há 37 minutos . 20 sem"]
+        return status.randomItem()!
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

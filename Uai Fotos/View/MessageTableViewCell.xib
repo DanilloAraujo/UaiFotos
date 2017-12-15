@@ -64,6 +64,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnCamera" destination="9e8-WV-rQe" id="sA4-XX-WAc"/>
                 <outlet property="friendAvatar" destination="wBq-34-Imu" id="9UD-Vp-B9S"/>
                 <outlet property="friendName" destination="uPe-9A-I8o" id="z8Y-58-SAn"/>
                 <outlet property="friendStatus" destination="11y-MR-Zo2" id="ugf-oK-uqZ"/>
